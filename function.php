@@ -9,7 +9,9 @@ function get_data(string $url) : array
     $result = file_get_contents($url);
     $data = json_decode($result, true);
     return $data;
+    
 }
+
 function how_long_to($days){
     return match (true){
         $days === 0 => "hoy se estrena",
@@ -21,7 +23,9 @@ function how_long_to($days){
     };
 }
 
-function render_templante (string $template, array $data = []){
+function render_templante(string $template, array $data = [])
+{
+    extract($data);
     require "templates/$template.php";
 
 }

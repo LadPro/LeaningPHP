@@ -9,11 +9,9 @@ $data = get_data(API_URL);
 
 
 ?>
-<?php
-require render_templante("head");
-require 'sections/style.php';
-require 'sections/main.php';
 
-?>
+<?php render_templante("head", $data);?>
+<?php render_templante("style");?>
+<?php render_templante("main", $data);?>
 
 
