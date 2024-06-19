@@ -14,11 +14,11 @@ function get_data(string $url) : array
 
 function how_long_to($days){
     return match (true){
-        $days === 0 => "hoy se estrena",
-        $days === 1 => "mañana se estrena",
-        $days < 7 => "esta semana se estrena",
-        $days < 30 => "este mes se estrena",
-        default => "se estrena en $days",
+        $days === 0 => "Hoy se estrena",
+        $days === 1 => "Mañana se estrena",
+        $days < 7 => "Esta semana se estrena",
+        $days < 30 => "Este mes se estrena",
+        default => "Se estrena en $days",
 
     };
 }

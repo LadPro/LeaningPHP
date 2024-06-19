@@ -81,6 +81,10 @@ class nextMovie
 
         );
     }
+    public function get_data()
+    {
+        return get_object_vars($this);
+    }
 }
 
 ?>
